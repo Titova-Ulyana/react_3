@@ -1,22 +1,19 @@
 import React from "react";
 import Header from "../components/header";
 import Footer from "../components/footer";
-import Slider from "../components/slider";
-import Naiden from "../components/naiden";
-import Podpiska from "../components/podpiska";
+import Orders from "../components/orders";
 
-const Main = () => {
+
+const Edit_Pet = () => {
     return (
 <div>
       <main style={{'minHeight':'70vh'}}>
       <Header/>
-      <Slider/>
-      <Naiden/>
-      <Podpiska/>
+      <Orders/>
       </main>
       <Footer/>
 </div>
   );
 };
 
-export default Main;
+export default Edit_Pet;

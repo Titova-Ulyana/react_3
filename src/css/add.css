@@ -1,0 +1,7 @@
+
+    .hidden{
+    display: none;
+    }
+    #exampleCheck1:checked~.hidden{
+        display: flex;
+    }

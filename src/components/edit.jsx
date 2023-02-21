@@ -11,9 +11,9 @@ const Edit = () => {
 
             <div class="mb-3 p-3 border">
                 <label for="image1" class="form-label">Выберите файлы изображений:</label>
-                <input type="file" class="form-control mb-3" id="image1" value="Загрузить изображение" required/>
-                <input type="file" class="form-control mb-3" id="image2" value="Загрузить изображение"/>
-                <input type="file" class="form-control mb-3" id="image3" value="Загрузить изображение"/>
+                <input type="file" class="form-control mb-3" id="image1"required/>
+                <input type="file" class="form-control mb-3" id="image2"/>
+                <input type="file" class="form-control mb-3" id="image3"/>
             </div>
 
             <div class="mb-3">
@@ -24,7 +24,7 @@ const Edit = () => {
                 <label for="description" class="form-label">Описание:</label>
                 <textarea class="form-control" id="description" required></textarea></div>
                 
-            <input type="submit" class="btn btn-primary form-control" value="Отправить"/>
+            <input type="submit" class="btn btn-primary form-control" value={"Отправить"}/>
         </form>
     </div>
 </div>

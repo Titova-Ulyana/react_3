@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 
 const Searchs = () => {
     return (
@@ -24,7 +26,7 @@ const Searchs = () => {
                 <label for="password" className="form-label">Введите вид животного:</label>
                 <input type="text" className="form-control" id="password"/>
             </div>
-            <input type="submit" className="btn btn-primary" value="Войти"/>
+            <Link to={'/order'}><input type="submit" className="btn btn-primary" value={'Найти'}/></Link>
         </form>
     </div>
 </div>

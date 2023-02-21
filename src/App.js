@@ -2,8 +2,10 @@ import Main from "./pages/main";
 import AddPet from "./pages/add_pet";
 import Auth from "./pages/auth";
 import Edits from "./pages/edit_pet";
+
 import Order from "./pages/order";
 import Pet from "./pages/pet";
+
 import Profile from "./pages/profile";
 import Regist from "./pages/registration";
 import Search from "./pages/search";

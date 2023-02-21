@@ -2,14 +2,21 @@ import React from "react";
 import Header from "../components/header";
 import Footer from "../components/footer";
 import Orders from "../components/orders";
-
+import Result from "../components/res"
+import cat from '../img/pets/кошка.jpg';
+import goap from '../img/pets/коза.jpeg';
 
 const Edit_Pet = () => {
+  let pet1={id:14, kind:'Кошка', photos:cat, description: 'Потерялась кошка, пушистая, серая. Любит играть, ласковая.', mark: 'ca-001-spb', district: 'Василиостровский', date: '24-03-2020' }
+  let pet2={id:18, kind:'Коза', photos:goap, description: 'Потерялась коза, последний раз видели в здании Московского вокзала г. Санкт-Петербург. Коза белая, пуховая', mark: 'go-011-spb', district: 'Центральный', date: '14-03-2022'}
+
     return (
 <div>
-      <main style={{'minHeight':'70vh'}}>
+      <main style={{'minHeight':'70vh' }}>
       <Header/>
-      <Orders/>
+      <Result/>
+      <Orders pet={pet1}/>
+      <Orders pet={pet2}/>
       </main>
       <Footer/>
 </div>

@@ -29,6 +29,9 @@ function Header() {
             <li className="nav-item">
               <Link to={'/search'} className="nav-link">Поиск по объявлениям</Link>
             </li>
+            <li className="nav-item">
+              <Link to={'/auth'} className="nav-link">Войти</Link>
+            </li>
           </ul>
           <form className="d-flex">
             <input className="form-control me-2" type="search" list="pets" placeholder="Поиск" aria-label="Search"/>

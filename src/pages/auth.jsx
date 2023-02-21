@@ -1,6 +1,6 @@
 import React from 'react'
 import Footer from "../components/footer";
-import Add from "../components/add";
+import Au from "../components/authentication";
 import Header from "../components/header";
 
 function Auth() {
@@ -8,7 +8,7 @@ function Auth() {
     <div>
       <main style={{'minHeight':'70vh'}}>
         <Header/>
-        <Add/>
+        <Au/>
         </main>
         <Footer/>
     </div>
@@ -16,3 +16,4 @@ function Auth() {
 }
 
 export default Auth
+

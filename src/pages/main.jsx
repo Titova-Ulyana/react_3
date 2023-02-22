@@ -9,9 +9,13 @@ import Cards from "../components/carts";
 import cat from '../img/pets/кошка.jpg';
 import goap from '../img/pets/коза.jpeg';
 
+import dog from '../img/pets/собака.jpg';
+//import mouse from '../img/pets/мышь.jpg';
+//import gorill from '../img/pets/горилла.jpg';
 
-
-
+let pets1={photos:dog, naiden:'Найдена собака', description:'Собака рыжая, была утеряна в красногвардейчком райне районе'}
+//let pets2={photos:mouse, naiden:'Найдена мышь', description:'Мышь серая, была утеряна в центральном районе'}
+//let pets3={photos:gorill, naiden:'Найдена горила', description:'Горилла, была утеряна в красногвардейчком райне районе'}
 
 
 const Main = () => {
@@ -29,7 +33,7 @@ return (
       <main style={{'minHeight':'85vh'}}>
       <Header/>
       <Cards card={card1}/>
-      <Slider/>
+      <Slider pets={pets1}/>
       <Cards card={card2}/>
       <Animal pet={pet1}/>
       <Animal pet={pet2}/>

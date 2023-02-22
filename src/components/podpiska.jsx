@@ -3,7 +3,6 @@ import React from "react";
 const Podpiska = () => {
     return (
 <div>
-    <h2 class="text-center text-white bg-primary m-2">Подписка на новости</h2>
     <form class="w-50 m-auto p-3" style={{'minWidth':'300px'}}>
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Введите адрес электронной почты</label>

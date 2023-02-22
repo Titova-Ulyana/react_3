@@ -11,7 +11,6 @@ const Authentication = () => {
 
     return (
 <div>
-    <h2 className="text-center text-white bg-primary m-2">Аутентификация</h2>
     <div className="p-3">
         <form className="w-50 m-auto border p-3" style={{'minWidth':'300px;'}}>
 

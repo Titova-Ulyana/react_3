@@ -3,7 +3,6 @@ import React from "react";
 const Prof = () => {
     return (
 <div>
-    <h2 className="text-center text-white bg-primary m-2">Личный кабинет</h2>
     <div className="p-3">
             <div className="d-flex flex-row flex-wrap border m-auto p-3 w-50" style={{'minWidth':'300px'}}>
 

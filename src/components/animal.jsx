@@ -1,12 +1,12 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
 
 const Naiden = (props) => {
     return (
 <div>
-    <h2 className="text-center text-white bg-primary m-2">Карточки найденных животных</h2>
     <div className="d-flex flex-row flex-wrap">
-        <div className="d-flex flex-row flex-wrap border m-3 p-3" style={{'minWidth':'300px', 'width':'45%'}}>
+        <div className="d-flex flex-row flex-wrap border m-3 p-3 position-relative" style={{'minWidth':'300px', 'width':'45%'}}>
         <img src={props.pet.photos} className="w-75" alt="рисунок животного"/>
             <p className="w-50 text-primary" style={{'minWidth':'250px;'}}>id:</p>
             <p className="w-50" style={{'minWidth':'250px;'}}>{props.pet.id}</p>
@@ -25,6 +25,7 @@ const Naiden = (props) => {
 
             <p className="w-50 text-primary" style={{'minWidth':'300px;'}}>Дата:</p>
             <p className="w-50" style={{'minWidth':'300px;'}}>{props.pet.date}</p>
+            <Link to={'/pets'}><button type="submit" className="btn btn-primary">Подробнее</button></Link>
         </div>
     </div>
 </div>

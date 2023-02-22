@@ -1,36 +1,39 @@
-import React from "react";
+import React, { useState }  from "react";
 import css from '../css/add.css';
 
 
 const Add = () => {
+
+    const [new_pet,setNew_pet] = useState();
+    //console.log(new_pet);
+
     return (
 <div>
 <link rel="stylesheet" href={css}/>
-    <h2 className="text-center text-white bg-primary m-2">Добавление нового объявления</h2>
     <div className="p-3">
         <form className="w-50 m-auto border border-primary p-3 was-validated" style={{'minWidth':'300px;'}}>
 
             <div className="mb-3">
                 <label for="name" className="form-label">Введите ваше имя</label>
-                <input type="text" className="form-control" id="name" required/>
+                <input type="text" className="form-control" id="name" required onChange={(e)=>setNew_pet({...new_pet, name:e.target.value})}/>
                 <div  className="form-text">Используйте кириллические буквы.</div>
             </div>
 
             <div className="mb-3">
                 <label for="phone" className="form-label">Введите свой телефон:</label>
-                <input type="text" className="form-control" id="phone" required/>
+                <input type="text" className="form-control" id="phone" required onChange={(e)=>setNew_pet({...new_pet, phone:e.target.value})}/>
                 <div  className="form-text">Используйте цифры, +, -.</div>
             </div>
 
             <div className="mb-3">
                 <label for="email" className="form-label">Введите адрес электронной почты</label>
-                <input type="email" className="form-control" id="email" required/>
+                <input type="email" className="form-control" id="email" required onChange={(e)=>setNew_pet({...new_pet, email:e.target.value})}/>
                 <div  className="form-text">Мы никогда не делимся Вашими e-mail ни с кем.</div>
             </div>
 
             <div className="mb-3">
                 <label for="kind" className="form-label">Введите вид животного:</label>
-                <input type="text" className="form-control" id="kind" required/></div>
+                <input type="text" className="form-control" id="kind" required onChange={(e)=>setNew_pet({...new_pet, kind:e.target.value})}/></div>
 
             <div className="mb-3 form-check border p-3">
                 <input type="checkbox" className="form-check-input m-3" id="exampleCheck1"/>
@@ -47,18 +50,18 @@ const Add = () => {
 
             <div className="mb-3 p-3 border">
                 <label for="image1" className="form-label">Выберите файлы изображений:</label>
-                <input type="file" className="form-control mb-3" id="image1" required/>
-                <input type="file" className="form-control mb-3" id="image2"/>
-                <input type="file" className="form-control mb-3" id="image3"/>
+                <input type="file" className="form-control mb-3" id="image1" required onChange={(e)=>setNew_pet({...new_pet, image1:e.target.value})}/>
+                <input type="file" className="form-control mb-3" id="image2" onChange={(e)=>setNew_pet({...new_pet, image2:e.target.value})}/>
+                <input type="file" className="form-control mb-3" id="image3" onChange={(e)=>setNew_pet({...new_pet, image3:e.target.value})}/>
             </div>
 
             <div className="mb-3">
                 <label for="chip" className="form-label">Электронный чип:</label>
-                <input type="text" className="form-control" id="chip" required/></div>
+                <input type="text" className="form-control" id="chip" required onChange={(e)=>setNew_pet({...new_pet, chip:e.target.value})}/></div>
 
             <div className="mb-3">
                 <label for="description" className="form-label">Описание:</label>
-                <textarea className="form-control" id="description" required></textarea></div>
+                <textarea className="form-control" id="description" required onChange={(e)=>setNew_pet({...new_pet, description:e.target.value})}></textarea></div>
 
             <div className="mb-3 form-check p-3">
                 <input type="checkbox" className="form-check-input" id="check1" required/>

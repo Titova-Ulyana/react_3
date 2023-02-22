@@ -1,17 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 
 const Searchs = () => {
+
+    const [poisk,setPoisk] = useState();
+    //console.log(poisk)
+
     return (
 <div>
-    <h2 className="text-center text-white bg-primary m-2">Поиск по объявлениям</h2>
     <div className="p-3">
         <form className="w-50 m-auto border p-3" style={{'minWidth':'300px'}}>
 
             <div className="mb-3">
                 <label for="district" className="form-label">Выберите район:</label>
-                <select id="district" className="form-select">
+                <select id="district" className="form-select" onChange={(e)=>setPoisk({...poisk, district:e.target.value})}>
                     <option>Приморский</option>
                     <option>Петроградский</option>
                     <option>Василиостровский</option>
@@ -23,8 +26,8 @@ const Searchs = () => {
             </div>
 
             <div className="mb-3">
-                <label for="password" className="form-label">Введите вид животного:</label>
-                <input type="text" className="form-control" id="password"/>
+                <label for="kind" className="form-label">Введите вид животного:</label>
+                <input type="text" className="form-control" id="kind" onChange={(e)=>setPoisk({...poisk, kind:e.target.value})}/>
             </div>
             <Link to={'/order'}><input type="submit" className="btn btn-primary" value={'Найти'}/></Link>
         </form>

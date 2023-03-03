@@ -1,13 +1,21 @@
 import React from 'react';
-import { Link } from "react-router-dom";
 
 
-const Naiden = (props) => {
+const Animal = (props) => {
+ 
+function pet_id(id){
+    
+window.location = window.location + ('pets/'+id);
+
+}
+
+
     return (
 <div>
-    <div className="d-flex flex-row flex-wrap">
-        <div className="d-flex flex-row flex-wrap border m-3 p-3 position-relative" style={{'minWidth':'300px', 'width':'45%'}}>
-        <img src={props.pet.photos} className="w-75" alt="рисунок животного"/>
+    
+        <div className="d-flex flex-row flex-wrap border m-3 p-3" style={{'minWidth':'300px', 'minHeight':'1000px'}}>
+        <img src={props.pet.photos} className="w-100" alt="рисунок животного"/>
+
             <p className="w-50 text-primary" style={{'minWidth':'250px;'}}>id:</p>
             <p className="w-50" style={{'minWidth':'250px;'}}>{props.pet.id}</p>
 
@@ -25,10 +33,10 @@ const Naiden = (props) => {
 
             <p className="w-50 text-primary" style={{'minWidth':'300px;'}}>Дата:</p>
             <p className="w-50" style={{'minWidth':'300px;'}}>{props.pet.date}</p>
-            <Link to={'/pets'}><button type="submit" className="btn btn-primary">Подробнее</button></Link>
+            
+            <button type="submit" className="btn btn-primary" onClick={()=>pet_id(props.pet.id)}>Подробнее</button>
         </div>
     </div>
-</div>
     )
 }
-export default Naiden;
+export default Animal;

@@ -49,7 +49,7 @@ const Regist = () => {
                 }
             }
             )
-    
+            .catch(error => console.log('error', error));
     }
 
 

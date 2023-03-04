@@ -25,7 +25,7 @@ function patchemail(){
       .then(response => response.json())
       .then(result => {
         if(!result.error){
-            window.location.reload()
+            window.location = '/profile'
         }
 else{
     document.getElementById('er').style.display = "block"

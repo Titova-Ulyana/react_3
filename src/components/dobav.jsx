@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 
 const Dobavlenie = (props) => {
@@ -25,6 +24,12 @@ const Dobavlenie = (props) => {
         }
 
 
+ 
+          function edit(id){
+              
+          window.location = 'edit_pet';
+          
+          }
 
 
 
@@ -56,7 +61,7 @@ const Dobavlenie = (props) => {
             <p className="w-50 text-primary" style={{'minWidth':'300px'}}>Дата:</p>
             <p className="w-50" style={{'minWidth':'300px'}}>{props.order.date}</p>
                 <div className="position-absolute" style={{'top':'15px', 'right':'15px', 'cursor':'pointer'}} onClick={()=>deletepet(props.order.id)}>&#10060;</div>
-                <Link to={'/edit_pet'}><button type="submit" className="btn btn-primary" >Редактировать объявление</button></Link>
+                <button type="submit" className="btn btn-primary" onClick={()=>edit(props.order.id)}>Редактировать объявление</button>
             </div>
         </div>
 </div>

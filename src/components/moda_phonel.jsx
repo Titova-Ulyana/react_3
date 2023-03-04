@@ -23,7 +23,7 @@ const Mod = () => {
           .then(response => response.json())
           .then(result => {
             if('data' in result){
-                window.location.reload()
+                window.location = '/profile'
             }
             else{
         document.getElementById('ers').style.display = "block"

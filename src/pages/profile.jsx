@@ -103,20 +103,20 @@ function Profile() {
       <div>
       <p className='text-center'>{page}</p> 
       <nav aria-label="Page navigation example" className="m-3">
-    <ul className="pagination">
-        <li className="page-item">
+        <ul className="pagination">
+          <li className="page-item">
             <Link to={'#'} className="page-link" aria-label="Previous">
-                <span aria-hidden="true">&laquo;</span>
+              <span aria-hidden="true">&laquo;</span>
             </Link>
-        </li>
-{list}
-        <li className="page-item">
+            </li>
+              {list}
+            <li className="page-item">
             <Link to={'#'} className="page-link" aria-label="Next">
-                <span aria-hidden="true">&raquo;</span>
+              <span aria-hidden="true">&raquo;</span>
             </Link>
-        </li>
-    </ul>
-    </nav>
+          </li>
+        </ul>
+      </nav>
       </div>
       </main>
       <Footer/>
